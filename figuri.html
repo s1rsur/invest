@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --brown-color: #664a32;
+            --blue-color: #a8c2cf;
+            --grey-color: #dfe1e6;
+        }
+        body
+        {
+            background-color: #feeddc;
+        }
+        .area
+        {
+            display: flex;
+            justify-content: center;
+            
+        }
+        .area .pict
+        {
+            background-color: white;
+            width: 344px;
+            height: 496px;
+            margin: 20px;
+            border: 2px solid #b0b1ad;
+            box-shadow: -2px 2px 2px 2px #8b8076;
+            position: relative;
+        }
+        .area .pict div{
+            position: absolute;
+        }
+        .grey
+        {
+            background-color : #dfe1e6;
+        }
+        .brown
+        {
+            background-color: #664a32;
+        }
+        .blue
+        {
+            background-color: #a8c2cf;
+        }
+        .border
+        {
+            border: 3px solid #525252;
+            z-index: 2;
+        }
+
+
+
+        #pict_center .blue{
+            width: 120px;
+            height: 120px;
+            top: 114px;
+            left: 38px;
+        }
+
+        #pict_center .brown{
+            width: 80px;
+            height: 80px;
+            top: 282px;
+            left: 132px;
+        }
+
+        #pict_center .grey{
+            width: 70px;
+            height: 35px;
+            top: 156px;
+            left: 211px;
+        }
+
+        #pict_center .border{
+            width: 142px;
+            height: 142px;
+            top: 174px;
+            left: 98px;
+        }
+
+        #pict_left .blue{
+            width: 124px;
+            height: 124px;
+            top: 90px;
+            left: 110px;
+            border-radius: 62px;
+        }
+
+        #pict_left .border{
+            width: 142px;
+            height: 142px;
+            top: 158px;
+            left: 98px;
+            border-radius: 71px;
+        }
+
+        #pict_left .brown{
+            width: 80px;
+            height: 80px;
+            top: 258px;
+            left: 132px;
+            border-radius: 40px;
+        }
+
+        #pict_left .grey{
+            width: 80px;
+            height: 40px;
+            top: 348px;
+            left: 132px;
+            border-radius: 40px 40px 0px 0px;
+        }
+        
+        #pict_right .triangle_blue{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 87px;
+            left: 113px;
+            border-width: 0 54px 108px 54px;
+            border-color: transparent transparent #a8c2cf transparent;
+        }
+
+        #pict_right .triangle_brown{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 258px;
+            left: 132px;
+            border-width: 0 34px 68px 34px;
+            border-color: transparent transparent #664a32 transparent;
+        }
+
+        #pict_right .triangle_grey{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 358px;
+            left: 132px;
+            border-width: 0 34px 68px 34px;
+            border-color: transparent transparent #dfe1e6 transparent;
+        }
+        #pict_right .triangle_grey::after{
+            content: "";
+            background-color: white;
+            position: absolute;
+            height: 38px;
+            width: 136px;
+            left: -34px;
+        }
+
+        #pict_right .triangle_border{
+            background-color: #525252;
+            z-index: 2;
+            height: 2px;
+            width: 142px;
+        }
+
+        #pict_right #triangle_border_center
+        {
+            top: 295px;
+            left: 96px;
+            
+        }
+
+        #pict_right #triangle_border_left
+        {
+            top: 234px;
+            left: 61px;
+            transform: rotate(-60deg);
+        }
+
+        #pict_right #triangle_border_right
+        {
+            top: 234px;
+            left: 131px;
+            transform: rotate(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <div class="pict" id = "pict_left">
+            <div class="border"></div>
+            <div class="blue"></div>
+            <div class="brown"></div>
+            <div class="grey"></div>
+        </div>
+        <div class="pict" id = "pict_center">
+            <div class="border"></div>
+            <div class="blue"></div>
+            <div class="brown"></div>
+            <div class="grey"></div>
+        </div>
+        <div class="pict" id = "pict_right">
+            <div id = 'triangle_border_left' class="triangle_border" ></div>
+            <div id = 'triangle_border_center' class="triangle_border" ></div>
+            <div id = 'triangle_border_right' class="triangle_border" ></div>
+            <div class="triangle_blue"></div>
+            <div class="triangle_brown"></div>
+            <div class="triangle_grey"></div>
+        </div>
+    </div>
+</body>
+</html>

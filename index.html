@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Инвестиции</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/blood.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,8 +16,57 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Слайд 1</section>
-				<section>Slide 2</section>
+				<section class="center">
+					<h1>Инвестиции</h1>
+				</section>
+				<section class = "center">
+					<h2>Основные понятия инвестиций</h2>
+				</section>
+				<section data-markdown="markdown\invest.md"></section>
+				<section data-markdown="markdown\trading.md"></section>
+				<section data-markdown="markdown\market.md"></section>
+				<section data-markdown="markdown\exchange.md"></section>
+				<section data-markdown="markdown\broker.md"></section>
+				<section data-markdown="markdown\investment_portfolio.md"></section>
+				<section data-markdown="markdown\diversification.md"></section>
+				<section data-markdown="markdown\bull_and_bear.md"></section>
+				<section data-markdown="markdown\bear.md"></section>
+				<section data-markdown="markdown\bull.md"></section>
+				<section data-markdown="markdown\flat.md"></section>
+				<section class = "center">
+					<h2>Доходность портфеля</h2>
+				</section>
+				<section> 
+					<h3>Доходность</h3>
+					<p> Доходность - показатель эффективности</p>
+				</section>
+				<section data-menu-title = "Доходность по методу Дитца" data-markdown="markdown\rate_of_return.md">
+					<section data-menu-title = "Доходность по методу Дитца" data-markdown="markdown\sum.md"></section>
+				</section>
+				<section data-menu-title = "Программа по расчёту доходности" data-fullscreen>
+					<iframe  src="html/ror.html" frameborder="0" class="stretch"></iframe>
+				</section>
+				<section class = "center">
+					<h2>Графики инвестиций</h2>
+				</section>
+				<section data-menu-title = "Линейная функция" data-markdown="markdown\line.md"></section>
+				<section data-menu-title = "Балашиха" data-fullscreen>
+					<iframe src="html/line.html" frameborder="0" class="stretch"></iframe>
+				</section>
+				<section data-markdown="markdown\candlestick.md"></section>
+				<section data-fullscreen>
+					<iframe src="html/candlestick.html" frameborder="0" class="stretch"></iframe>
+				</section>
+
+				<section class ="center">
+					<h2>Весёлые картинки</h2>
+				</section>
+				<section data-menu-title = "Krasivus" data-background-image="img/1.avif" data-background-size="contain"></section>
+				<section data-menu-title = "Memus" data-background-image="img/oilya.jpeg" alt="Mem"></section>
+				<section data-menu-title = "Obezyanus" data-background-image="img/obezyan.jpg" data-background-size="contain"></section>
+				<section data-menu-title="Last">
+					sps za vnimanie
+				</section>
 			</div>
 		</div>
 
@@ -31,7 +80,21 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				slideNumber: true,
+				controls: true,
+				center: false,
+				dependencies: [{
+					src: 'plugin/katex/katex.js',
+					async: true,
+				}, {
+					src: 'plugin/fullscreen/fullscreen.js',
+				}, {
+					src: 'plugin/menu/menu.js'
+				}],
+				menu: {
+					numbers: true,
+					markers: true,
+				} ,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
